@@ -38,11 +38,12 @@ namespace WareHouseSoftw.UI.Areas.Admin.Controllers
                 category.AddDate = DateTime.Now;
                 db.Categories.Add(category);
                 db.SaveChanges();
-                return Redirect("/Admin/Category/CategoryList");
+                ViewBag.ProcessConditon=1;
+                return View();                     //"/Admin/Category/CategoryList"
             }
             else
             {
-
+                ViewBag.ProcessConditon=2;
                 return View();
             }
         }

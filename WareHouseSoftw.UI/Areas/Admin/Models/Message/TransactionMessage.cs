@@ -10,7 +10,6 @@ namespace WareHouseSoftw.UI.Areas.Admin.Models.Message
     {
         
         public static string success = "Transaction is successful.";
-
         public static string fail = "Transaction is failed";
     }
 }
