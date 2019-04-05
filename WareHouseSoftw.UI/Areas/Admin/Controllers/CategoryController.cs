@@ -42,7 +42,8 @@ namespace WareHouseSoftw.UI.Areas.Admin.Controllers
             }
             else
             {
-                return Redirect("/Admin/Category/CategoryList");
+
+                return View();
             }
         }
         public ActionResult UpdateCategory(int id)
