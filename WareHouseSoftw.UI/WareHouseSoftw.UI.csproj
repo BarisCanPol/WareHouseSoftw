@@ -95,31 +95,42 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\AdminLTE.min.css" />
+    <Content Include="Content\css\blue.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\dataTables.bootstrap.min.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\ionicons.min.css" />
     <Content Include="Content\css\_all-skins.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\ionicons.svg" />
     <Content Include="Content\scripts\adminlte.min.js" />
     <Content Include="Content\scripts\bootstrap.min.js" />
     <Content Include="Content\scripts\dataTables.bootstrap.min.js" />
     <Content Include="Content\scripts\demo.js" />
     <Content Include="Content\scripts\fastclick.js" />
+    <Content Include="Content\scripts\icheck.min.js" />
     <Content Include="Content\scripts\jquery.dataTables.min.js" />
     <Content Include="Content\scripts\jquery.min.js" />
     <Content Include="Content\scripts\jquery.slimscroll.min.js" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AppUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Models\DTO\BaseDTO.cs" />
     <Compile Include="Areas\Admin\Models\DTO\CategoryDTO.cs" />
+    <Compile Include="Areas\Admin\Models\DTO\UserDTO.cs" />
     <Compile Include="Areas\Admin\Models\Message\TransactionMessage.cs" />
+    <Compile Include="Areas\Admin\Models\VM\LoginViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -136,6 +147,22 @@
     <Content Include="Areas\Admin\Views\Shared\Partial\FormMessage.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Partial\CategoryForm.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Partial\SectionForm.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUser\AddUser.cshtml" />
+    <Content Include="Content\fonts\ionicons.eot" />
+    <Content Include="Content\fonts\ionicons.ttf" />
+    <Content Include="Content\fonts\ionicons.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\Views\Account\UserLogin.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUser\UserList.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUser\UpdateUser.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -146,9 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\VM\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="Content\fonts\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>

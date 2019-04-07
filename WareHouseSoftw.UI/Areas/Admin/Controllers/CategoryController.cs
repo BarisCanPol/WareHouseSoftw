@@ -39,7 +39,7 @@ namespace WareHouseSoftw.UI.Areas.Admin.Controllers
                 db.Categories.Add(category);
                 db.SaveChanges();
                 ViewBag.ProcessConditon=1;
-                return View();                     //"/Admin/Category/CategoryList"
+                return View("/Admin/Category/CategoryList");                     //"/Admin/Category/CategoryList"
             }
             else
             {
