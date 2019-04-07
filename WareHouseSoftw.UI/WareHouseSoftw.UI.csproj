@@ -126,11 +126,14 @@
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Models\DTO\BaseDTO.cs" />
     <Compile Include="Areas\Admin\Models\DTO\CategoryDTO.cs" />
+    <Compile Include="Areas\Admin\Models\DTO\ProductDTO.cs" />
     <Compile Include="Areas\Admin\Models\DTO\UserDTO.cs" />
     <Compile Include="Areas\Admin\Models\Message\TransactionMessage.cs" />
     <Compile Include="Areas\Admin\Models\VM\LoginViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\VM\PoductVM.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -163,6 +166,9 @@
     <Content Include="Areas\Admin\Views\Account\UserLogin.cshtml" />
     <Content Include="Areas\Admin\Views\AppUser\UserList.cshtml" />
     <Content Include="Areas\Admin\Views\AppUser\UpdateUser.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\AddProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\ProdcutList.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\UpdateProduct.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

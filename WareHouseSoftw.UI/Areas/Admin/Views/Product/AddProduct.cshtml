@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayoutPage.cshtml";
+}
+@using WareHouseSoftw.UI.Areas.Admin.Models.DTO
+@model List<WareHouseSoftw.Model.Entity.Category>
+
+<section class="content-header">
+    <ol class="breadcrumb">
+        <li><a href="/Admin/HomeAdminHomeIndex"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/Admin/Product/ProdcutList">Product List</a></li>
+        <li class="active">Add Product</li>
+    </ol>
+</section>
+
+<div class="col-md-6">
+    <!-- general form elements -->
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Add Product</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form action="/Admin/Product/AddProduct" method="post" role="form">
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="Product Name">Product Name</label>
+                    <input type="text" name="ProductName" class="form-control" i" placeholder="Enter Product Name">
+
+                </div>
+                <div class="form-group">
+                    <label for="Prospectus">Prospectus</label>
+                    <input type="text" name="Prospectus" class="form-control" placeholder="Enter Prospectus">
+
+                </div>
+                <div class="form-group">
+                    <label for="Unit Price">Unit Price</label>
+                    <input type="text" name="UnitPirce" class="form-control" placeholder="Enter Unit Price">
+
+                </div>
+                <div class="form-group">
+                    <label for="Units In Stock">Units In Stock</label>
+                    <input type="text" name="UnitsInStock" class="form-control" placeholder="Unit In Stock">
+
+                </div>
+                <div class="form-group">
+                    <label for="Quantity">Quantity</label>
+                    <input type="text" name="Quantity" class="form-control" placeholder="Quantity">
+
+                </div>
+                <div class="form-group">
+                    <label for="Price">Price</label>
+                    <input type="text" name="Price" class="form-control" placeholder="Quantity">
+
+                </div>
+                <div class="form-group">
+
+                    <label for="Category Name">Category Name</label>
+                    <select name="CategoryID" class="form-control">
+                        @foreach (var item in Model)
+                        {
+                            <option value="@item.ID">@item.CategoryName</option>
+                        }
+                    </select>
+                </div>
+               
+                
+            </div>
+            <!-- /.box-body -->
+
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
