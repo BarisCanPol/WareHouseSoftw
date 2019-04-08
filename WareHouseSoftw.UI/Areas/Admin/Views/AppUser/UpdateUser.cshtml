@@ -48,7 +48,11 @@
                             <select name="Role" class="form-control" value="@Model.Role">
                                 @foreach (var item in Enum.GetNames(typeof(WareHouseSoftw.Model.Enum.Role)))
                                 {
-                                    <option value="@item">@item</option>
+                                 
+	
+                                <option value="@item"> @item </option>
+                                                     
+                                       
                                 }
                             </select>
 

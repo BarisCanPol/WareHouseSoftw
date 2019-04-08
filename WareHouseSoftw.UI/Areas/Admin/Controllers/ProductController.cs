@@ -73,9 +73,12 @@ namespace WareHouseSoftw.UI.Areas.Admin.Controllers
             model.Product.CategoryName = product.Category.CategoryName;
             model.Product.CategoryID = product.CategoryID;
 
-            return View(model);
+            
+           List<Category> categories = db.Categories.Where(x => x.Status == WareHouseSoftw.Model.Enum.Status.Active || x.Status == WareHouseSoftw.Model.Enum.Status.Updated).ToList();
 
-            //model.Categories.Where(x => x.Status == PharmaceuticalWarehouseSoftware.Model.Enum.Status.Active || x.Status == PharmaceuticalWarehouseSoftware.Model.Enum.Status.Updated).ToList();
+            model.Categories = categories;
+
+            return View(model);
 
         }
         [HttpPost]

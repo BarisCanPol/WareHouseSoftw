@@ -3,8 +3,9 @@
     ViewBag.Title = "AddProduct";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayoutPage.cshtml";
 }
-@using WareHouseSoftw.UI.Areas.Admin.Models.DTO
+
 @model List<WareHouseSoftw.Model.Entity.Category>
+   
 
 <section class="content-header">
     <ol class="breadcrumb">
@@ -28,6 +29,7 @@
                 <div class="form-group">
                     <label for="Product Name">Product Name</label>
                     <input type="text" name="ProductName" class="form-control" i" placeholder="Enter Product Name">
+                    
 
                 </div>
                 <div class="form-group">
@@ -57,7 +59,7 @@
                 </div>
                 <div class="form-group">
 
-                    <label for="Category Name">Category Name</label>
+                    <label for="Category Name">Category Name</label>            @*burayı eskş haline getir*@
                     <select name="CategoryID" class="form-control">
                         @foreach (var item in Model)
                         {
